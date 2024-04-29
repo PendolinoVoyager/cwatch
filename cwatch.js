@@ -47,7 +47,7 @@ function createCmd(main_cmd) {
 function onFileChange(eventType, filename) {
   clearTimeout(compileTimeout);
   compileTimeout = setTimeout(() => {
-  // Bullshit alert: some text editors emit rename event without changing name on save.
+  // Bull alert: some text editors emit rename event without changing name on save.
   // Then, we need to stop watching the old, nonexistent file :)
   if (eventType === "rename") {
     watcher.close() //the file doesn't exist anymore;
